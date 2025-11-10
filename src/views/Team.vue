@@ -93,7 +93,7 @@ onMounted(() => {
 </script>
 
 
-<style scoped>
+ <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap");
 
 * {
@@ -159,16 +159,16 @@ onMounted(() => {
   background: #f3f3f3;
 }
 .name {
-    font-size: 15px;
-    font-weight: 700;
-    color: #202124;
-    margin-bottom: 2px;
-  }
-  .role {
-    font-size: 12.5px;
-    color: #5f6368;
-    font-weight: 400;
-  }
+  font-size: 15px;
+  font-weight: 700;
+  color: #202124;
+  margin-bottom: 2px;
+}
+.role {
+  font-size: 12.5px;
+  color: #5f6368;
+  font-weight: 400;
+}
 
 /* Modal */
 .modal-overlay {
@@ -228,9 +228,7 @@ onMounted(() => {
   margin-bottom: 25px;
 }
 
- /*  Popup animation */
-
-/* Disable Vue fade flash completely */
+/*  Popup animation */
 .fade-enter-active,
 .fade-leave-active {
   transition: none !important;
@@ -279,35 +277,27 @@ onMounted(() => {
   }
 }
 
-
-
- /* Social icons */
+/* Social icons */
 .modal-social {
   display: flex;
-  justify-content: center; /* center horizontally */
-  align-items: center;
-  gap: 20px;
-  margin-top: 24px; /* space above icons */
-  margin-bottom: 8px; /* balance before CLOSE */
+  gap: 18px;
 }
 
 .modal-social svg {
-  width: 20px;
-  height: 22px;
+  width: 18px;
+  height: 26px;
   fill: #202124;
-  transition: transform 0.25s ease, fill 0.3s ease;
-  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .modal-social a:hover svg {
   fill: #0a66c2;
-  transform: scale(1.08); /* light hover lift */
 }
 
-/* Close button - centered under icons */
 .modal-close {
-  display: block;
-  margin: 22px auto 0 auto; /* center horizontally */
+  position: absolute;
+  right: 32px;
+  bottom: 22px;
   background: none;
   border: none;
   font-size: 15px;
@@ -315,9 +305,7 @@ onMounted(() => {
   cursor: pointer;
   font-weight: 500;
   letter-spacing: 1.2px;
-  text-transform: uppercase;
 }
-
 
 /* Responsive */
 @media (max-width: 1000px) {
@@ -395,5 +383,16 @@ onMounted(() => {
     padding-left: 12px;
     padding-right: 20px;
   }
+
+  /* ✅ Social icons centered only in mobile */
+  .modal-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    margin-top: 16px;
+  }
 }
 </style>
+
